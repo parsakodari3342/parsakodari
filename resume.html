@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزومه حرفه‌ای پارسا کدری | حسابدار و کارشناس مالی</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --crimson: #87142b;
+            --crimson-light: #a81c38;
+            --charcoal: #1c1f24;
+            --text-dark: #22262b;
+            --text-muted: #5e6876;
+            --border: #e2e6eb;
+            --bg-light: #f7f9fb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: #eef2f6;
+            color: var(--text-dark);
+            line-height: 1.7;
+            padding: 30px 15px;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        /* Top Action Bar (hidden in print) */
+        .action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 36px;
+            background: var(--charcoal);
+            color: #ffffff;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            border: none;
+        }
+
+        .btn-print {
+            background: var(--crimson);
+            color: #ffffff;
+        }
+
+        .btn-print:hover {
+            background: var(--crimson-light);
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Resume Paper */
+        .resume-paper {
+            padding: 44px 50px;
+        }
+
+        /* Header */
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--crimson);
+            margin-bottom: 26px;
+        }
+
+        .header-title h1 {
+            font-size: 2.1rem;
+            color: var(--crimson);
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .header-title h2 {
+            font-size: 1.15rem;
+            color: var(--charcoal);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .header-title p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .header-contact {
+            text-align: left;
+            direction: ltr;
+            font-size: 0.88rem;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .contact-row svg {
+            color: var(--crimson);
+            width: 15px;
+            height: 15px;
+        }
+
+        .header-avatar {
+            width: 90px;
+            height: 110px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid var(--crimson);
+        }
+
+        /* Sections */
+        .resume-section {
+            margin-bottom: 24px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--crimson);
+            font-size: 1.15rem;
+            font-weight: 700;
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        .section-heading svg {
+            color: var(--crimson);
+        }
+
+        /* Summary */
+        .summary-text {
+            font-size: 0.95rem;
+            line-height: 1.85;
+            color: var(--text-dark);
+            text-align: justify;
+        }
+
+        /* Job Items */
+        .job-item {
+            margin-bottom: 16px;
+        }
+
+        .job-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-role {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        .job-company {
+            color: var(--crimson);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .job-date {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            background: var(--bg-light);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .job-tasks {
+            list-style: none;
+            padding-right: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 5px;
+        }
+
+        .job-tasks li {
+            position: relative;
+            font-size: 0.9rem;
+            color: #3b424d;
+        }
+
+        .job-tasks li::before {
+            content: '•';
+            position: absolute;
+            right: -16px;
+            color: var(--crimson);
+            font-size: 1.1rem;
+        }
+
+        /* Two Column Layout for Education & Skills */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin: 0 4px 8px 0;
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+
+        .skill-group-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--crimson);
+            margin: 10px 0 6px;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+            }
+            .action-bar {
+                display: none;
+            }
+            .resume-paper {
+                padding: 15px 25px;
+            }
+            .resume-header {
+                margin-bottom: 16px;
+                padding-bottom: 14px;
+            }
+            .resume-section {
+                margin-bottom: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <!-- Top Action Bar -->
+        <div class="action-bar">
+            <a href="index.html" class="action-btn btn-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                بازگشت به سایت
+            </a>
+            <div style="display: flex; gap: 10px;">
+                <a href="Parsa_Kodari_Resume.pdf" download="Parsa_Kodari_Resume.pdf" class="action-btn" style="background: rgba(255,255,255,0.12); color: #fff;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    دانلود فایل PDF
+                </a>
+                <button onclick="window.print()" class="action-btn btn-print">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    چاپ / ذخیره PDF
+                </button>
+            </div>
+        </div>
+
+        <div class="resume-paper">
+            <!-- Header -->
+            <div class="resume-header">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <img src="parsa.webp" alt="پارسا کدری" class="header-avatar" onerror="this.src='parsa.png'">
+                    <div class="header-title">
+                        <h1>پارسا کدری</h1>
+                        <h2>حسابدار و کارشناس امور مالی | متولد ۲۰۰۶</h2>
+                        <p>دانشجوی ترم پنجم کارشناسی حسابداری دانشگاه آزاد اسلامی تهران مرکزی</p>
+                    </div>
+                </div>
+
+                <div class="header-contact">
+                    <div class="contact-row">
+                        <span>0903 444 3342</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="contact-row">
+                        <span>Parsa.kodari@gmail.com</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="contact-row">
+                        <span>instagram.com/Parsa___kodari</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg>
+                    </div>
+                    <div class="contact-row">
+                        <span>تهران، سعادت‌آباد</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <div class="contact-row">
+                        <span>parsakodari.ir</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Summary -->
+            <div class="resume-section">
+                <div class="section-heading">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    خلاصه حرفه‌ای و هدف شغلی
+                </div>
+                <p class="summary-text">
+                    دانشجوی ترم پنجم کارشناسی حسابداری دانشگاه آزاد اسلامی واحد تهران مرکزی (مجتمع سوهانک)، دارای مدرک جامع حسابداری و گواهینامه تخصصی نرم‌افزار سپیدار سیستم از مجتمع فنی تهران (MFT). دارای تجارب ارزشمند و عملی در حسابداری فروشگاهی، انبارداری و کنترل موجودی کالا در فروشگاه‌های اینترنتی رویال دیجی و دی‌پی کامپیوتر، شرکت‌های بازرگانی و گردشگری، مدیریت و کنترل تنخواه‌گردان، مغایرت‌گیری بانکی و ساماندهی اسناد مالی. فردی منظم، دقیق، پیگیر و با انگیزه بالا جهت خلق ارزش و استقرار نظم مالی در سازمان‌های توسعه‌گرا.
+                </p>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="resume-section">
+                <div class="section-heading">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    سوابق شغلی و تجارب اجرایی
+                </div>
+
+                <!-- 1 -->
+                <div class="job-item">
+                    <div class="job-top">
+                        <div>
+                            <span class="job-role">حسابدار مالی</span> | <span class="job-company">شرکت زمان‌نما پویش مهراد</span>
+                        </div>
+                        <span class="job-date">شهریور ۱۴۰۵ — آبان ۱۴۰۵</span>
+                    </div>
+                    <ul class="job-tasks">
+                        <li>ثبت، کنترل و بایگانی اسناد مالی روزانه و نظارت بر سلامت فاکتورها</li>
+                        <li>انجام مغایرت‌گیری بانکی و کنترل حساب‌های تجاری طرف‌های حساب</li>
+                        <li>مدیریت و تسویه حساب‌های تنخواه‌گردان مجموعه و هزینه‌های عملیاتی</li>
+                    </ul>
+                </div>
+
+                <!-- 2 -->
+                <div class="job-item">
+                    <div class="job-top">
+                        <div>
+                            <span class="job-role">حسابدار و مسئول کنترل موجودی و انبارداری</span> | <span class="job-company">رویال دیجی و دی‌پی کامپیوتر (royaldigi.ir / dpcomputer.ir)</span>
+                        </div>
+                        <span class="job-date">تیر ۱۴۰۵ — شهریور ۱۴۰۵</span>
+                    </div>
+                    <ul class="job-tasks">
+                        <li>حسابداری فروشگاهی، ثبت فاکتورهای فروش و تطبیق تسویه‌حساب درگاه‌های پرداخت اینترنتی</li>
+                        <li>انبارگردانی دوره‌ای، بررسی کاردکس کالا، کنترل مغایرت‌ها و کسری/اضافات انبار کالای دیجیتال</li>
+                        <li>ثبت دریافت‌ها و پرداخت‌های طرف‌های حساب و تأمین‌کنندگان قطعات کامپیوتر</li>
+                    </ul>
+                </div>
+
+                <!-- 3 -->
+                <div class="job-item">
+                    <div class="job-top">
+                        <div>
+                            <span class="job-role">حسابدار</span> | <span class="job-company">شرکت خدمات مسافرتی و گردشگری سرزمین اساطیری</span>
+                        </div>
+                        <span class="job-date">مرداد ۱۴۰۴ — آبان ۱۴۰۴</span>
+                    </div>
+                    <ul class="job-tasks">
+                        <li>ثبت اسناد مالی تورها، بلیت‌ها، اقامتگاه‌ها و تسویه‌حساب با همکاران تجاری</li>
+                        <li>مدیریت تنخواه هزینه‌های عملیاتی تور و کنترل اسناد مثبته هزینه‌ای</li>
+                    </ul>
+                </div>
+
+                <!-- 4 -->
+                <div class="job-item">
+                    <div class="job-top">
+                        <div>
+                            <span class="job-role">ادمین و هماهنگ‌کننده اجرایی</span> | <span class="job-company">شرکت همایشگران سام</span>
+                        </div>
+                        <span class="job-date">اردیبهشت ۱۴۰۴ — آذر ۱۴۰۴</span>
+                    </div>
+                    <ul class="job-tasks">
+                        <li>هماهنگی اداری و اجرایی برگزاری سمینارها و همایش‌ها و پاسخگویی به مراجعین</li>
+                        <li>مستندسازی، بایگانی قراردادها و آرشیو دیجیتال رویدادها</li>
+                    </ul>
+                </div>
+
+                <!-- 5 -->
+                <div class="job-item">
+                    <div class="job-top">
+                        <div>
+                            <span class="job-role">کمک‌حسابدار و مسئول تنخواه‌گردان</span> | <span class="job-company">مجموعه آموزشی و مهدکودک ققنوس</span>
+                        </div>
+                        <span class="job-date">خرداد ۱۴۰۴ — آذر ۱۴۰۴</span>
+                    </div>
+                    <ul class="job-tasks">
+                        <li>ثبت و کنترل روزانه دریافت‌ها (شهریه) و پرداخت‌های جاری و هزینه‌های عملیاتی</li>
+                        <li>مدیریت و بستن کامل حساب‌های تنخواه‌گردان و ساماندهی فاکتورهای ماهانه</li>
+                        <li>انجام مغایرت‌گیری بانکی و پیگیری مطالبات</li>
+                    </ul>
+                </div>
+
+                <!-- 6 -->
+                <div class="job-item">
+                    <div class="job-top">
+                        <div>
+                            <span class="job-role">ادمین و مسئول امور اداری</span> | <span class="job-company">انجمن صنفی آشپزان و سرآشپزان ایران</span>
+                        </div>
+                        <span class="job-date">خرداد ۱۴۰۳ — دی ۱۴۰۳</span>
+                    </div>
+                    <ul class="job-tasks">
+                        <li>مدیریت دبیرخانه، تنظیم صورتجلسات و مکاتبات اداری، ساماندهی پرونده‌های اعضا</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education & Skills Grid -->
+            <div class="grid-2col">
+                <!-- Education -->
+                <div class="resume-section">
+                    <div class="section-heading">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                        تحصیلات و مدارک
+                    </div>
+
+                    <div style="margin-bottom: 12px;">
+                        <div style="font-weight: 700; color: var(--charcoal); font-size: 0.98rem;">کارشناسی حسابداری (ترم ۵)</div>
+                        <div style="font-size: 0.88rem; color: var(--crimson);">دانشگاه آزاد اسلامی، واحد تهران مرکزی (سوهانک)</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">در حال تحصیل</div>
+                    </div>
+
+                    <div style="margin-bottom: 12px;">
+                        <div style="font-weight: 700; color: var(--charcoal); font-size: 0.98rem;">مدرک جامع حسابداری و سپیدار سیستم</div>
+                        <div style="font-size: 0.88rem; color: var(--crimson);">مجتمع فنی تهران (MFT)</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">گواهینامه رسمی و معتبر</div>
+                    </div>
+
+                    <div>
+                        <div style="font-weight: 700; color: var(--charcoal); font-size: 0.98rem;">گواهینامه مهارت‌های هفتگانه ICDL</div>
+                        <div style="font-size: 0.88rem; color: var(--crimson);">تسلط بر اکسل مالی، ویندوز و نرم‌افزارهای اداری</div>
+                    </div>
+                </div>
+
+                <!-- Skills & Language -->
+                <div class="resume-section">
+                    <div class="section-heading">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                        مهارت‌ها و زبان خارجی
+                    </div>
+
+                    <div class="skill-group-title">نرم‌افزارهای مالی و حسابداری:</div>
+                    <div>
+                        <span class="skill-tag">سپیدار همکاران سیستم (پیشرفته)</span>
+                        <span class="skill-tag">هلو (مسلط)</span>
+                        <span class="skill-tag">شایگان سیستم</span>
+                    </div>
+
+                    <div class="skill-group-title">عملیات مالی و کامپیوتر:</div>
+                    <div>
+                        <span class="skill-tag">مغایرت‌گیری بانکی</span>
+                        <span class="skill-tag">کنترل تنخواه‌گردان</span>
+                        <span class="skill-tag">حسابداری انبار</span>
+                        <span class="skill-tag">اکسل مالی پیشرفته</span>
+                        <span class="skill-tag">تکالیف مالیاتی و اظهارنامه</span>
+                        <span class="skill-tag">ICDL</span>
+                    </div>
+
+                    <div class="skill-group-title">زبان انگلیسی (۱۴ سال سابقه آموزش):</div>
+                    <div style="font-size: 0.88rem; line-height: 1.8;">
+                        شنیداری: <strong>۴ از ۵</strong> | خواندن: <strong>۴ از ۵</strong><br>
+                        نگارش: <strong>۴ از ۵</strong> | مکالمه: <strong>۳ از ۵</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
