@@ -344,15 +344,15 @@ def generate_pdf_via_browser(browser_path, output_pdf='Parsa_Kodari_Resume.pdf')
     <div class="job-item">
         <div class="job-row">
             <div class="job-title-company">
-                <span class="job-role">حسابدار مالی</span>
+                <span class="job-role">عضو تیم اجرایی</span>
                 <span class="job-sep">|</span>
                 <span class="job-company">شرکت زمان‌نما پویش مهراد</span>
             </div>
             <div class="job-date">شهریور ۱۴۰۵ — آبان ۱۴۰۵</div>
         </div>
         <ul class="job-tasks">
-            <li>ثبت و رسیدگی روزانه به اسناد مالی، کنترل صحت فاکتورها و بایگانی دفاتر مالی</li>
-            <li>انجام مغایرت‌گیری بانکی دوره‌ای و کنترل حساب‌های تجاری طرف‌های حساب</li>
+            <li>پیشبرد امور اجرایی و اداری، هماهنگی فرآیندهای سازمانی و بایگانی منظم اسناد</li>
+            <li>رسیدگی روزانه به اسناد و فاکتورها، کنترل صحت مدارک و مغایرت‌گیری بانکی</li>
             <li>نظارت، مدیریت و تسویه هزینه‌ها و حساب‌های تنخواه‌گردان مجموعه</li>
         </ul>
     </div>
