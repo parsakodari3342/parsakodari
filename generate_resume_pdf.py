@@ -351,9 +351,9 @@ def generate_pdf_via_browser(browser_path, output_pdf='Parsa_Kodari_Resume.pdf')
             <div class="job-date">شهریور ۱۴۰۵ — آبان ۱۴۰۵</div>
         </div>
         <ul class="job-tasks">
-            <li>پیشبرد امور اجرایی و اداری، هماهنگی فرآیندهای سازمانی و بایگانی منظم اسناد</li>
-            <li>رسیدگی روزانه به اسناد و فاکتورها، کنترل صحت مدارک و مغایرت‌گیری بانکی</li>
-            <li>نظارت، مدیریت و تسویه هزینه‌ها و حساب‌های تنخواه‌گردان مجموعه</li>
+            <li>پیشبرد امور اجرایی، هماهنگی فرآیندهای دفتری و اداری شرکت</li>
+            <li>ثبت و رسیدگی روزانه به اسناد، فاکتورها و بایگانی مدارک مالی</li>
+            <li>مغایرت‌گیری بانکی، کنترل حساب‌های تجاری و تسویه تنخواه‌گردان</li>
         </ul>
     </div>
 
@@ -478,8 +478,15 @@ def generate_pdf_via_browser(browser_path, output_pdf='Parsa_Kodari_Resume.pdf')
         temp_html
     ]
 
-    subprocess.run(cmd, check=True, capture_output=True)
-    print(f"[OK] Generated {output_pdf} successfully via {os.path.basename(browser_path)}!")
+    try:
+        subprocess.run(cmd, check=True, capture_output=True)
+        print(f"[OK] Generated {output_pdf} successfully via {os.path.basename(browser_path)}!")
+    finally:
+        if os.path.exists(temp_html):
+            try:
+                os.remove(temp_html)
+            except Exception:
+                pass
 
 if __name__ == '__main__':
     browser = get_browser_path()
