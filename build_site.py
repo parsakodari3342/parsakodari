@@ -5,7 +5,11 @@ import os
 with open('parsa.webp', 'rb') as f:
     b64_img = base64.b64encode(f.read()).decode('utf-8')
 
+with open('logo_pk.webp', 'rb') as f:
+    b64_logo = base64.b64encode(f.read()).decode('utf-8')
+
 img_data_uri = f"data:image/webp;base64,{b64_img}"
+logo_data_uri = f"data:image/webp;base64,{b64_logo}"
 
 html_content = f'''<!DOCTYPE html>
 <html lang="fa" dir="rtl" data-language="fa">
@@ -235,11 +239,27 @@ html_content = f'''<!DOCTYPE html>
             flex-shrink: 0;
         }}
 
-        .brand-logo-svg {{
+        .brand-logo-img {{
             display: block;
             flex-shrink: 0;
-            width: 58px;
-            height: 36px;
+            height: 38px;
+            width: auto;
+            max-width: 58px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 6px rgba(115, 15, 35, 0.12));
+            transition: transform var(--transition-fast);
+        }}
+
+        .brand:hover .brand-logo-img {{
+            transform: scale(1.05);
+        }}
+
+        .brand-divider {{
+            width: 1.5px;
+            height: 26px;
+            background: linear-gradient(180deg, rgba(115, 15, 35, 0.25), rgba(110, 104, 104, 0.35), rgba(115, 15, 35, 0.25));
+            border-radius: 1px;
+            flex-shrink: 0;
         }}
 
         .brand-text h2 {{
@@ -1652,6 +1672,14 @@ html_content = f'''<!DOCTYPE html>
                 font-size: 0.95rem;
             }}
 
+            .brand-logo-img {{
+                height: 32px;
+            }}
+
+            .brand-divider {{
+                height: 22px;
+            }}
+
             .brand-text p.brand-sub {{
                 display: none; /* Keeps top header 100% clean on small phones */
             }}
@@ -1677,12 +1705,9 @@ html_content = f'''<!DOCTYPE html>
     <header id="mainHeader">
         <div class="container nav-container">
             <!-- Brand & PK Logo (Upper Right in RTL) -->
-            <a href="#" class="brand">
-                <svg width="58" height="36" viewBox="0 0 240 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg">
-                    <text x="15" y="106" font-family="'Playfair Display', Georgia, serif" font-size="110" font-weight="700" fill="#730f23">P</text>
-                    <text x="74" y="106" font-family="'Playfair Display', Georgia, serif" font-size="110" font-weight="700" fill="#6e6868">K</text>
-                    <line x1="195" y1="22" x2="195" y2="118" stroke="#8a8585" stroke-width="5" stroke-linecap="round" />
-                </svg>
+            <a href="#" class="brand" aria-label="پارسا کدری - صفحه اصلی">
+                <img src="{logo_data_uri}" alt="لوگوی پارسا کدری" class="brand-logo-img" width="55" height="38">
+                <div class="brand-divider"></div>
                 <div class="brand-text">
                     <h2 data-fa>پارسا کدری</h2>
                     <h2 data-en>Parsa Kodari</h2>
@@ -2568,11 +2593,8 @@ html_content = f'''<!DOCTYPE html>
     <footer>
         <div class="container footer-container">
             <div class="brand">
-                <svg width="50" height="32" viewBox="0 0 240 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg">
-                    <text x="15" y="106" font-family="'Playfair Display', Georgia, serif" font-size="110" font-weight="700" fill="#730f23">P</text>
-                    <text x="74" y="106" font-family="'Playfair Display', Georgia, serif" font-size="110" font-weight="700" fill="#6e6868">K</text>
-                    <line x1="195" y1="22" x2="195" y2="118" stroke="#8a8585" stroke-width="5" stroke-linecap="round" />
-                </svg>
+                <img src="{logo_data_uri}" alt="لوگوی پارسا کدری" class="brand-logo-img" width="46" height="32">
+                <div class="brand-divider"></div>
                 <div class="brand-text">
                     <h2 data-fa>پارسا کدری</h2>
                     <h2 data-en>Parsa Kodari</h2>
