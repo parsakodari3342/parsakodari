@@ -529,6 +529,27 @@ html_content = f'''<!DOCTYPE html>
             color: var(--crimson-bright);
         }}
 
+        .badge-pill.highlight-pill {{
+            background: rgba(115, 15, 35, 0.05);
+            border-color: rgba(115, 15, 35, 0.35);
+            color: var(--crimson-bright);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }}
+
+        .badge-pill.highlight-pill:hover {{
+            background: var(--crimson-bright);
+            color: #ffffff;
+            border-color: var(--crimson-bright);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(115, 15, 35, 0.25);
+        }}
+
+        .badge-pill.highlight-pill:hover svg {{
+            color: #ffffff;
+        }}
+
         /* Hero Visual & Portrait */
         .hero-visual {{
             position: relative;
@@ -1089,8 +1110,8 @@ html_content = f'''<!DOCTYPE html>
         /* Education Section */
         .edu-grid {{
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
         }}
 
         .edu-card {{
@@ -1801,10 +1822,10 @@ html_content = f'''<!DOCTYPE html>
                 </h1>
 
                 <p class="hero-desc" data-fa>
-                    دانشجوی کارشناسی حسابداری دانشگاه آزاد اسلامی واحد تهران مرکزی (سوهانک) با گواهینامه حسابداری از مجتمع فنی تهران و مدرک سپیدار. برخوردار از تجارب عملی مؤثر در حسابداری فروشگاهی، انبارداری و کنترل موجودی کالا در وب‌سایت‌های رویال دیجی و دی‌پی کامپیوتر، شرکت‌های بازرگانی و گردشگری، مدیریت تنخواه، مغایرت‌گیری و ساماندهی اسناد مالی.
+                    دانشجوی کارشناسی حسابداری دانشگاه آزاد اسلامی واحد تهران مرکزی (سوهانک)، <strong>عضو انجمن حسابداران تهران</strong> و دارای گواهینامه حسابداری از مجتمع فنی تهران و مدرک سپیدار سیستم. برخوردار از تجارب عملی مؤثر در حسابداری فروشگاهی، انبارداری و کنترل موجودی کالا در وب‌سایت‌های رویال دیجی و دی‌پی کامپیوتر، شرکت‌های بازرگانی، گردشگری و تیم‌های اجرایی رویدادها، مدیریت تنخواه، مغایرت‌گیری و ساماندهی اسناد مالی.
                 </p>
                 <p class="hero-desc" data-en>
-                    Accounting student at Islamic Azad University, Central Tehran Branch) certified in Comprehensive Accounting and Sepidar ERP software by Tehran Technical Complex (MFT). Hands-on experience in commercial & e-commerce accounting, inventory control at RoyalDigi & DP Computer, petty cash oversight, bank reconciliation, and financial reporting.
+                    Accounting student at Islamic Azad University, Central Tehran Branch, <strong>Member of the Tehran Accountants Association</strong>, and certified in Comprehensive Accounting and Sepidar ERP software by Tehran Technical Complex (MFT). Hands-on experience in commercial & e-commerce accounting, inventory control at RoyalDigi & DP Computer, event executive coordination, petty cash oversight, bank reconciliation, and financial reporting.
                 </p>
 
                 <div class="hero-actions">
@@ -1821,6 +1842,11 @@ html_content = f'''<!DOCTYPE html>
                 </div>
 
                 <div class="hero-badges">
+                    <a href="https://tehran-acc.ir/community-members/%D9%BE%D8%A7%D8%B1%D8%B3%D8%A7-%DA%A9%D8%AF%D8%B1%DB%8C/" target="_blank" rel="noopener" class="badge-pill highlight-pill" title="مشاهده نمایه رسمی در انجمن حسابداران تهران">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                        <span data-fa>عضو انجمن حسابداران تهران ↗</span>
+                        <span data-en>Tehran Accountants Assoc. ↗</span>
+                    </a>
                     <div class="badge-pill">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                         <span data-fa>سپیدار سیستم</span>
@@ -1902,10 +1928,10 @@ html_content = f'''<!DOCTYPE html>
                 <h3 data-fa>شناسنامه حرفه‌ای</h3>
                 <h3 data-en>Professional Identity</h3>
                 <p data-fa>
-                    اینجانب <strong>پارسا کدری</strong>، متولد سال ۲۰۰۶ (۱۳۸۴)، دانشجوی رشته حسابداری در دانشگاه آزاد اسلامی واحد تهران مرکزی (سوهانک) هستم. با انگیزه بالا، اشتیاق به یادگیری مداوم و دیدگاهی سیستماتیک، تلاش کرده‌ام از ابتدای مسیر تحصیلی، دانش تئوریک را با تجارب واقعی محیط‌های کسب‌وکار درآمیزم. کار با دفاتر تجاری، نرم‌افزارهای یکپارچه مالی، فرآیندهای خرید و فروش، کنترل موجودی کالا و رفع مغایرت‌های بانکی و تنخواه از حوزه‌های تمرکز من است.
+                    اینجانب <strong>پارسا کدری</strong>، متولد سال ۲۰۰۶ (۱۳۸۴)، دانشجوی رشته حسابداری در دانشگاه آزاد اسلامی واحد تهران مرکزی (سوهانک) و <strong>عضو انجمن حسابداران تهران</strong> هستم. با انگیزه بالا، اشتیاق به یادگیری مداوم و دیدگاهی سیستماتیک، تلاش کرده‌ام از ابتدای مسیر تحصیلی، دانش تئوریک را با تجارب واقعی محیط‌های کسب‌وکار درآمیزم. کار با دفاتر تجاری، نرم‌افزارهای یکپارچه مالی، فرآیندهای خرید و فروش، کنترل موجودی کالا و رفع مغایرت‌های بانکی و تنخواه از حوزه‌های تمرکز من است.
                 </p>
                 <p data-en>
-                    I am <strong>Parsa Kodari</strong>, born in 2006, an undergraduate accounting student at Islamic Azad University Central Tehran Branch (Sohanak). Driven by dedication and strong analytical interest, I bridge academic accounting theories with real-world business operations. My background covers retail and corporate accounting, ERP implementations, sales-purchase tracking, inventory auditing, petty cash administration, and bank reconciliation.
+                    I am <strong>Parsa Kodari</strong>, born in 2006, an undergraduate accounting student at Islamic Azad University Central Tehran Branch (Sohanak) and an <strong>official member of the Tehran Accountants Association</strong>. Driven by dedication and strong analytical interest, I bridge academic accounting theories with real-world business operations. My background covers retail and corporate accounting, ERP implementations, sales-purchase tracking, inventory auditing, petty cash administration, and bank reconciliation.
                 </p>
             </div>
 
@@ -1969,11 +1995,11 @@ html_content = f'''<!DOCTYPE html>
                 <div class="timeline-card">
                     <div class="timeline-top">
                         <div>
-                            <div class="timeline-role" data-fa>عضو تیم اجرایی</div>
-                            <div class="timeline-role" data-en>Executive Team Member</div>
+                            <div class="timeline-role" data-fa>عضو تیم اجرایی نمایشگاه</div>
+                            <div class="timeline-role" data-en>Exhibition Executive Team Member</div>
                             <div class="timeline-company">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-                                <span data-fa>شرکت زمان نما پویش مهراد</span>
+                                <span data-fa>شرکت زمان‌نما پویش مهراد</span>
                                 <span data-en>Zaman Nama Pooyesh Mehrad Co.</span>
                             </div>
                         </div>
@@ -1981,18 +2007,20 @@ html_content = f'''<!DOCTYPE html>
                         <span class="timeline-date" data-en>Aug 2025 — Oct 2025</span>
                     </div>
                     <p class="timeline-desc" data-fa>
-                        همکاری در تیم اجرایی و پیشبرد امور عملیاتی شرکت، هماهنگی امور اداری و دفتری، کنترل و بایگانی اسناد مالی و فاکتورها، مغایرت‌گیری ماهانه و ساماندهی فرآیندهای اداری و مالی.
+                        همکاری در تیم اجرایی شرکت زمان‌نما پویش مهراد با تمرکز بر برنامه‌ریزی و هماهنگی تشریفات، همراهی و راهنمایی مهمانان در برنامه‌های گردشگری، تولید محتوای تصویری و طراحی تبلیغات نمایشگاهی با بهره‌گیری از هوش مصنوعی.
                     </p>
                     <p class="timeline-desc" data-en>
-                        Operations and administrative coordination as an executive team member, managing documentation and filing, verifying invoices, conducting bank reconciliations, and systematizing company workflows.
+                        Collaboration with the executive operations team at Zaman Nama Pooyesh Mehrad focusing on protocol planning and event coordination, escorting and guiding guests in tour programs, multimedia event documentation, and AI-driven exhibition promotional graphic design.
                     </p>
                     <ul class="timeline-tasks">
-                        <li data-fa>پیشبرد امور اجرایی، هماهنگی فرآیندهای دفتری و اداری شرکت</li>
-                        <li data-en>Facilitating executive workflows and daily administrative coordination</li>
-                        <li data-fa>ثبت و رسیدگی روزانه به اسناد، فاکتورها و بایگانی مدارک مالی</li>
-                        <li data-en>Daily invoice tracking, documentation verification, and financial archiving</li>
-                        <li data-fa>مغایرت‌گیری بانکی، کنترل حساب‌های تجاری و تسویه تنخواه‌گردان</li>
-                        <li data-en>Bank reconciliations, commercial account auditing, and petty cash settlement</li>
+                        <li data-fa><strong>هماهنگی تشریفات:</strong> مشارکت در برنامه‌ریزی و اجرای امور تشریفاتی، استقبال از مهمانان و هماهنگی فعالیت‌های اجرایی رویداد.</li>
+                        <li data-en><strong>Protocol Coordination:</strong> Participating in protocol planning, guest reception, and managing event executive operations.</li>
+                        <li data-fa><strong>راهنمای گردشگری (Tour Leader):</strong> همراهی و راهنمایی مهمانان در تورهای گردشگری و هماهنگی برنامه‌های بازدید.</li>
+                        <li data-en><strong>Tour Leader:</strong> Guiding and escorting guests in tour programs and coordinating itinerary schedules.</li>
+                        <li data-fa><strong>تصویربرداری رویدادها:</strong> ثبت و مستندسازی تصویری نمایشگاه، برنامه‌های جانبی و فعالیت‌های برگزارشده در طول رویداد.</li>
+                        <li data-en><strong>Event Media Coverage:</strong> Capturing photo and video documentation of exhibition proceedings and side activities.</li>
+                        <li data-fa><strong>طراحی تبلیغات با هوش مصنوعی (AI):</strong> ایده‌پردازی، طراحی و تولید تمامی بنرها و محتوای گرافیکی تبلیغاتی نمایشگاه با استفاده از ابزارهای هوش مصنوعی.</li>
+                        <li data-en><strong>AI-Powered Ad Design:</strong> Conceptualizing and producing promotional banners and graphic media using generative AI tools.</li>
                     </ul>
                 </div>
             </div>
@@ -2442,12 +2470,12 @@ html_content = f'''<!DOCTYPE html>
     <!-- Education & Certifications Section -->
     <section id="education" class="container">
         <div class="section-header reveal">
-            <span class="kicker" data-fa>سوابق تحصیلی و دوره‌های تخصصی</span>
-            <span class="kicker" data-en>EDUCATION & CERTIFICATIONS</span>
-            <h2 data-fa>پشتوانه علمی و مدارک حرفه‌ای</h2>
-            <h2 data-en>Academic Credentials & Certifications</h2>
-            <p data-fa>ترکیب دانش آکادمیک دانشگاهی در رشته حسابداری با مدارک رسمی و مهارت‌آموزی در مراکز معتبر آموزشی</p>
-            <p data-en>Combining university degree studies in accounting with accredited vocational certifications</p>
+            <span class="kicker" data-fa>سوابق تحصیلی، دوره‌ها و عضویت‌های حرفه‌ای</span>
+            <span class="kicker" data-en>EDUCATION, CREDENTIALS & MEMBERSHIPS</span>
+            <h2 data-fa>پشتوانه علمی، مدارک و عضویت‌های حرفه‌ای</h2>
+            <h2 data-en>Academic Credentials, Certifications & Memberships</h2>
+            <p data-fa>ترکیب دانش آکادمیک دانشگاهی در رشته حسابداری با مدارک رسمی، مهارت‌های کاربردی نرم‌افزاری و عضویت رسمی در انجمن‌های تخصصی کشور</p>
+            <p data-en>Combining academic degree studies in accounting with accredited vocational certifications and official professional association memberships</p>
         </div>
 
         <div class="edu-grid">
@@ -2480,6 +2508,24 @@ html_content = f'''<!DOCTYPE html>
                     <p data-en>Accredited certification in applied commercial accounting, legal ledger bookkeeping, cost calculation, and full modules of Sepidar ERP (Purchases, Sales, Inventory, Treasury).</p>
                     <span class="edu-badge" data-fa>گواهینامه رسمی و بین‌المللی</span>
                     <span class="edu-badge" data-en>Certified Credential</span>
+                </div>
+            </div>
+
+            <div class="edu-card reveal">
+                <div class="edu-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                </div>
+                <div class="edu-info">
+                    <h3 data-fa>عضویت رسمی در انجمن حسابداران تهران</h3>
+                    <h3 data-en>Tehran Accountants Association</h3>
+                    <h4 data-fa>جامعه تخصصی حسابداران تهران (tehran-acc.ir)</h4>
+                    <h4 data-en>Tehran Professional Accountants Community</h4>
+                    <p data-fa>عضو پیوسته و تاییدشده در جامعه حسابداران تهران؛ پیگیری مستمر استانداردهای حرفه‌ای، آموزش‌های نوین مالی و تعامل سازنده با جامعه مالی کشور.</p>
+                    <p data-en>Active registered member of Tehran Accountants Association; engaged in accounting standards, continuing education, and the Iranian financial community.</p>
+                    <a href="https://tehran-acc.ir/community-members/%D9%BE%D8%A7%D8%B1%D8%B3%D8%A7-%DA%A9%D8%AF%D8%B1%DB%8C/" target="_blank" rel="noopener" class="edu-badge" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; cursor: pointer;">
+                        <span data-fa>مشاهده نمایه رسمی عضویت ↗</span>
+                        <span data-en>View Official Member Profile ↗</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -2540,6 +2586,18 @@ html_content = f'''<!DOCTYPE html>
                             <span class="label" data-fa>صفحه کاری اینستاگرام</span>
                             <span class="label" data-en>Instagram Profile</span>
                             <span class="val">@Parsa___kodari</span>
+                        </div>
+                    </a>
+
+                    <!-- Tehran Accountants Association -->
+                    <a href="https://tehran-acc.ir/community-members/%D9%BE%D8%A7%D8%B1%D8%B3%D8%A7-%DA%A9%D8%AF%D8%B1%DB%8C/" target="_blank" rel="noopener" class="contact-item">
+                        <div class="contact-item-icon" style="color: var(--crimson-bright);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                        </div>
+                        <div class="contact-item-text">
+                            <span class="label" data-fa>نمایه در انجمن حسابداران تهران</span>
+                            <span class="label" data-en>Tehran Accountants Assoc. Profile</span>
+                            <span class="val" style="direction: ltr;">tehran-acc.ir/community-members/پارسا-کدری ↗</span>
                         </div>
                     </a>
 
